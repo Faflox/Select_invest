@@ -1,15 +1,16 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
     <title>Biuro Rachunkowe Select-Invest</title>
-    <link rel="stylesheet" href="static/webpage.css">
+    <link rel="stylesheet" href="{% static 'webpage/webpage.css' %}">
 </head>
 <body>
   <header>
       <nav class="navbar">
         <div>
-          <a class="brand" href="#">SelectInvest</a>
+          <a class="brand" href="{% url 'index' %}">SelectInvest</a>
         </div>
         <div>
           <a class="nav-link active" aria-current="page" href="{% url 'uslugi' %}">Usługi</a>

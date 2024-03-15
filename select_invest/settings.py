@@ -122,4 +122,6 @@ USE_TZ = True
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Define the URL to use when referring to static files uploaded to MEDIA_ROOT
+
+
 STATIC_URL = '/static/'

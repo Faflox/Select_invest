@@ -1,5 +1,17 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<h1>Wiesz, co robisz najlepiej, pozwól nam zająć się resztą</h1>
+<h1>Skontaktuj się z nami wypełniając formularz</h1>
+<form>
+    <label for="imie">Imie:</label>
+    <input type="text" id="imie" name="imie">
+    <label for="nazwa_firmy">Nazwa firmy:</label>
+    <input type="text" id="nazwa_firmy" name="nazwa_firmy">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email">
+    <label for="telefon">Telefon:</label>
+    <input type="tel" id="telefon" name="telefon">
+    <input type="submit" value="Wyslij">
+    
+</form>
 {% endblock %}
