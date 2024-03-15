@@ -12,14 +12,17 @@
           <a class="brand" href="#">SelectInvest</a>
         </div>
         <div>
-          <a class="nav-link active" aria-current="page" href="#">Usługi</a>
-          <a class="nav-link" href="#">Formularz</a>
+          <a class="nav-link active" aria-current="page" href="{% url 'uslugi' %}">Usługi</a>
+          <a class="nav-link" href="{% url 'formularz' %}">Formularz</a>
           <a class="nav-link" href="#"><button>Kontakt</button></a>
         </div>
       </nav>
   </header>
-{% block content %}
 
-{% endblock %}
+<div class="site-content">
+  {% block content %}
+
+  {% endblock %}
+</div>
 </body>
 </html>
