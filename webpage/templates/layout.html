@@ -5,12 +5,17 @@
     <meta charset="UTF-8">
     <title>Biuro Rachunkowe Select-Invest</title>
     <link rel="stylesheet" href="{% static 'webpage/webpage.css' %}">
+{% block head %}
+
+{% endblock %}
 </head>
 <body>
   <header>
       <nav class="navbar">
         <div>
-          <a class="brand" href="{% url 'index' %}">SelectInvest</a>
+          <a class="brand" href="{% url 'index' %}">
+            <img class="logo" src="{% static 'webpage/czysteplaskie1.png' %}">
+          </a>
         </div>
         <div>
           <a class="nav-link active" aria-current="page" href="{% url 'uslugi' %}">Usługi</a>
@@ -20,14 +25,13 @@
       </nav>
   </header>
 
-<div class="site-content">
+
   {% block content %}
 
   {% endblock %}
 </div>
 <footer class="footer">
-  <svg class="footer-icon"> 
-  </svg>
+
   <p>Copyright &copy; 2023 Select-Invest. Wszelkie prawa zastrzeżone.</p>
   <p></p>
 </footer>

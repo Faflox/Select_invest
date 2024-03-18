@@ -1,21 +1,23 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<h1 class="center">Skontaktuj się z nami</h1>
+<div class="site-content">
+    <h1 class="center">Skontaktuj się z nami</h1>
 
-<form class="contact" method="post">
-    <div class="form-group">
-        <input type="text" id="imie" name="imie" placeholder="Imię i nazwisko">
-    </div>
-    <div class="form-group">
-        <input type="text form-control" id="nazwa_firmy" name="nazwa_firmy" placeholder="Nazwa firmy">
-    </div>
-    <div class="form-group">
-        <input type="email form-control" id="email" name="email" placeholder="E-mail">
-    </div>
-    <div class="form-group">
-        <input type="tel form-control" id="telefon" name="telefon" placeholder="Numer telefonu">
-    </div>
-    <button type="submit" href="#">Wyślij</button>
-</form>
+    <form class="contact" method="post">
+        <div class="form-group">
+            <input type="text" id="imie" name="imie" placeholder="Imię i nazwisko">
+        </div>
+        <div class="form-group">
+            <input type="text form-control" id="nazwa_firmy" name="nazwa_firmy" placeholder="Nazwa firmy">
+        </div>
+        <div class="form-group">
+            <input type="email form-control" id="email" name="email" placeholder="E-mail">
+        </div>
+        <div class="form-group">
+            <input type="tel form-control" id="telefon" name="telefon" placeholder="Numer telefonu">
+        </div>
+        <button type="submit" href="#">Wyślij</button>
+    </form>
+</div>
 {% endblock %}
