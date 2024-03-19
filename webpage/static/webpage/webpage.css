@@ -10,7 +10,7 @@ body {
 header {
     background-color: #ffffff;
     align-items: center;
-    padding: 20px 2%;
+    padding: 0px 2%;
     
 }
 
@@ -37,7 +37,7 @@ button:hover{
 }
 
 .navbar {
-    padding: 4% 2%;
+    padding: 16px 2%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -48,6 +48,7 @@ button:hover{
 
 .logo{
     cursor: pointer;
+    width: 150px;
 }
 
 .site-content {
@@ -70,17 +71,6 @@ label {
     width: 150px;
 }
 
-.form-group {
-    width: 400px;
-    display: grid;
-    grid-template-columns: auto 1fr; 
-    align-items: center;
-    gap: 10px;
-    padding: 10px;
-    margin: 10px 0;
-    background-color: #0d43b02b;
-    border-radius: 20px;
-}
 
 .center{
     text-align: center;

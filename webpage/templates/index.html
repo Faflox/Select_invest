@@ -17,16 +17,44 @@
 </div>
 <div class="flexbox">
     <div class="flexbox-container">
-        Oferta dostosowana do Twoich potrzeb i wymagań
+        <div class="icon-container">
+            <img class="icon" src="static/webpage/svgs/alarm.svg" alt="alarm">
+        </div>
+        <div class="flexbox-text">
+            <p>
+                Oszczędź czas
+            </p>
+        </div>
     </div>
     <div class="flexbox-container">
-        Doświadczona kadra
+        <div class="icon-container">
+            <img class="icon" src="static/webpage/svgs/activity.svg" alt="activity">
+        </div>
+        <div class="flexbox-text">
+            <p>
+                Trzymaj rękę na pulsie  
+            </p>
+        </div>
     </div>
     <div class="flexbox-container">
-        bobo
+        <div class="icon-container">
+            <img class="icon" src="static/webpage/svgs/bar-chart.svg" alt="bar-char">
+        </div>
+        <div class="flexbox-text">
+            <p>
+                Doświadczona kadra
+            </p>
+        </div>
     </div>
     <div class="flexbox-container">
-        bobo
+        <div class="icon-container">
+            <img class="icon" src="static/webpage/svgs/floppy.svg" alt="floppy">
+        </div>
+        <div class="flexbox-text">
+            <p>
+                Miejsce
+            </p>
+        </div>
     </div>
 </div>
 <div class="carousel-box">
@@ -49,16 +77,22 @@
 
 <div class="site-content">
     <div class="contact-form">
-        <div>
-            <img class="form-img" src="{% static 'webpage/helpers.jpg' %}">
+        <div class="form-img">
+            <img src="{% static 'webpage/helpers.jpg' %}">
         </div>
         <div class="form">
-            <form class="contact" method="post">
-                <div class="form-group">
-                    <input type="text" id="imie" name="imie" placeholder="Imię i nazwisko">
-                    <input type="text form-control" id="nazwa_firmy" name="nazwa_firmy" placeholder="Nazwa firmy">
-                    <input type="email form-control" id="email" name="email" placeholder="E-mail">
-                    <input type="tel form-control" id="telefon" name="telefon" placeholder="Numer telefonu">
+            <form method="post">
+                {% csrf_token %}
+                <div class="contact">
+                    <div class="form-group">
+                        <input type="text" id="imie" name="imie" placeholder="Imię i nazwisko"><br>
+                        <input type="text form-control" id="nazwa_firmy" name="nazwa_firmy" placeholder="Nazwa firmy"><br>
+                        <input type="email form-control" id="email" name="email" placeholder="E-mail"><br>
+                        <input type="tel form-control" id="telefon" name="telefon" placeholder="Numer telefonu"><br>
+                    </div>
+                    <div class="form-group">
+                        <input type="text from-control" id="dodatkowe" name="dodatkowe" placeholder="Dodatkowe informacje">
+                    </div>
                 </div>
                 <button type="submit" href="#">Wyślij</button>
             </form>
