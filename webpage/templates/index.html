@@ -58,20 +58,13 @@
     </div>
 </div>
 <div class="carousel-box">
-    <p>Zaufali nam:</p>
+    <h1>Zaufali nam już:</h1>
     <div class="carousel">
-        <div class="carousel-logo"><img src="logo1.png" alt="Logo 1"></div>
-        <div class="carousel-logo"><img src="logo2.png" alt="Logo 2"></div>
-        <div class="carousel-logo"><img src="logo3.png" alt="Logo 3"></div>
-        <div class="carousel-logo"><img src="logo4.png" alt="Logo 3"></div>
-        <div class="carousel-logo"><img src="logo5.png" alt="Logo 3"></div>
-        <div class="carousel-logo"><img src="logo6.png" alt="Logo 3"></div>
-        <div class="carousel-logo"><img src="logo7.png" alt="Logo 3"></div>
-        <div class="carousel-logo"><img src="logo3.png" alt="Logo 3"></div>
-        <div class="carousel-logo"><img src="logo4.png" alt="Logo 3"></div>
-        <div class="carousel-logo"><img src="logo5.png" alt="Logo 3"></div>
-        <div class="carousel-logo"><img src="logo6.png" alt="Logo 3"></div>
-        <div class="carousel-logo"><img src="logo7.png" alt="Logo 3"></div>
+        <div class="carousel-logo"><img src="static/webpage/companies-logos/1.png" alt="Logo 1"></div>
+        <div class="carousel-logo"><img src="static/webpage/companies-logos/2.png" alt="Logo 2"></div>
+        <div class="carousel-logo"><img src="static/webpage/companies-logos/3.png" alt="Logo 3"></div>
+        <div class="carousel-logo"><img src="static/webpage/companies-logos/4.png" alt="Logo 4"></div>
+        <div class="carousel-logo"><img src="static/webpage/companies-logos/5.png" alt="Logo 5"></div>
     </div>
 </div>
 
@@ -83,21 +76,51 @@
         <div class="form">
             <form method="post">
                 {% csrf_token %}
+                <div class="form-title">
+                    <h1>Skontaktuj się z nami</h1>
+                </div>
                 <div class="contact">
                     <div class="form-group">
                         <input type="text" id="imie" name="imie" placeholder="Imię i nazwisko"><br>
-                        <input type="text form-control" id="nazwa_firmy" name="nazwa_firmy" placeholder="Nazwa firmy"><br>
                         <input type="email form-control" id="email" name="email" placeholder="E-mail"><br>
                         <input type="tel form-control" id="telefon" name="telefon" placeholder="Numer telefonu"><br>
                     </div>
                     <div class="form-group">
-                        <input type="text from-control" id="dodatkowe" name="dodatkowe" placeholder="Dodatkowe informacje">
+                        <input class="text-message" type="text from-control" id="dodatkowe" name="dodatkowe" placeholder="Dodatkowe informacje">
                     </div>
                 </div>
                 <button type="submit" href="#">Wyślij</button>
             </form>
         </div>
     </div>
+    <br>
+    <br>
+    <br>
+    <div class="uslugi">
+        <div class="uslugi-txt">
+        <h1>Wiesz, co robisz nadsafasdfaozwól nam ząć się resztą</h1>
+        <p>adsf</p>
+        </div>
+        <div class="uslugi-img">
+            <img src="{% static 'webpage/uslugi.jpg' %}">
+        </div>
+
+    </div>
 </div>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const carousel = document.querySelector('.carousel');
+        const images = carousel.querySelectorAll('.carousel-logo');
+
+        // Clone the first few images and append them to the end of the carousel
+        
+        images.forEach((image, index) => {
+            if (index < 5) {
+                const clonedImage = image.cloneNode(true);
+                carousel.appendChild(clonedImage);
+            }
+        });
+    });
+</script>
 {% endblock %}

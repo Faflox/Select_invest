@@ -3,7 +3,7 @@
     background-image: url("dokumenty-dwa.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 0px;
+    background-position: center -60px;
     padding-top: 16%;
     padding-bottom: 16%;
     background-attachment: fixed;
@@ -16,13 +16,13 @@
 .container h1{
     font-size: 50px;
 }
-
+/*4box flexbox--------------------------------------------------------------------------------------------------------------------*/
 .flexbox{
     display: flex;
     justify-content: space-between;
     margin-top: -80px;
-    margin-left: 4%;
-    margin-right: 4%;
+    margin-left: 8%;
+    margin-right: 8%;
     margin-bottom: 4%;
 }
 
@@ -54,52 +54,57 @@
 }
 
 .flexbox-container p{
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bold;
     padding-bottom:8%;
 }
-
+/*logos carousel--------------------------------------------------------------------------------------------------------------------*/
 .carousel-box{
-    background-color: aliceblue;
-    margin: 20px 4%;
     display: flex;
-    justify-content: space-between;
-    font-size: 20px;
-    box-shadow: 0px 0px 100px 0px #0000002e;
-    backdrop-filter: blur(5px);
-    border-radius: 20px;
+    background-color: aliceblue;
+    margin: 20px 0%;
     margin-bottom: 64px;
+    justify-content: space-between;
     align-items: center;
+    box-shadow: 0px 10px 40px 20px #0000003e;
 }
-.carousel-box p{
+.carousel-box h1{
     font-size: 30px;
     font-weight: bold;
-    padding: 0% 4%;
+    padding-left: 12%;
+    overflow: hidden;
+    text-align: center;
 }
 .carousel {
-    
-    width: 75%; /* Set the width of the carousel */
-    overflow: hidden; /* Hide overflowing content */
+    width: 72%; /* Set the width of the carousel */
     white-space: nowrap; /* Prevent logos from wrapping to next line */
+    overflow: hidden;
+}
+@keyframes carousel-animation {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-510%); /* adjust percentage based on number of images */
+    }
 }
   
 .carousel-logo {
     display: inline-block; /* Display logos in a row */
-    padding: 10px; /* Add spacing between logos */
-    animation: scroll 10s linear infinite; /* Adjust the duration of the animation */
-}
-  
-@keyframes scroll {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-100%); /* Adjust based on the width of the carousel */
-    }
+    padding: 0% 10%; /* Add spacing between logos */
+    align-items: center;
+    animation: carousel-animation 20s linear infinite; /* adjust timing as needed */
+    flex: 0 0 24%
 }
 
+.carousel-logo img{
+    width: 60px;
+    height: auto;
+}
+
+/*formularz-----------------------------------------------------------------------------------------------------------------------*/
 .site-content{
-    margin: 0% 4%;
+    margin: 0% 8%;
     padding: 1%;
     background: linear-gradient(to right, rgba(240, 248, 255, 0.7), rgba(110, 224, 214, 0.496)); /* Add a gradient from rgba(240, 248, 255, 0.7) to rgba(255, 255, 255, 0.5) */
     backdrop-filter: blur(10px); /* Apply a blur effect */
@@ -128,19 +133,45 @@
 
 .form-group{
     align-items: center;
-    padding: 4% 4%;
     width: 50%;
+}
+
+.right{
+    height:100%;
+}
+
+.form-group input{
+    color: #000000;
+    border: 2px solid;
+    border-color: rgba(0, 0, 0, 0);
+    outline: none;
+    border-radius: 20px;
+    padding: 4% 4%;
+    margin: 4% 0%;
+    width: 88%;
+}
+
+.form-group input:focus{
+    border: 2px solid;
+    border-color: rgb(0, 0, 0);
+}
+
+.text-message{
+    height: 72%;
 }
 
 .form{
     width: 50%;
-    border-radius: 40px;
 }
 
 .form button{
     align-items: center;
     width: 80%;
-    margin: 4% 4%;
+    margin: 4% 0%;
+}
+
+.form-title{
+    border-bottom: #0000003e 1px solid;
 }
 
 

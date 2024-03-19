@@ -1,23 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap');
-
 body {
     margin: 0;
     padding: 0;
-    font-family: Helvetica, 'Montserrat', Helvetica, sans-serif;
+    font-family: 'Doppio One', Helvetica, sans-serif;
     background-color: #ced8dc; /* Fallback color */
 }
+
+.doppio-one-regular {
+    font-family: "Doppio One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
 
 header {
     background-color: #ffffff;
     align-items: center;
-    padding: 0px 2%;
+    padding: 0px 4%;
     
+}
+
+p{
+    font-family: 'Readex Pro', 'Doppio One', helvetica, sans-serif;
 }
 
 a{
     text-decoration: none;
     color: rgb(0, 0, 0);
     padding: 10px;
+    font-family: 'Readex Pro', 'Doppio One', helvetica, sans-serif;
 }
 
 button{
@@ -28,7 +37,7 @@ button{
     cursor: pointer;
     transition : all 0.5s ease 0s;
     color: white;
-    font-family: helvetica, 'Montserrat', helvetica, sans-serif;
+    font-family: 'Readex Pro', 'Doppio One', helvetica, sans-serif;
     font-size: 18px;
 }
 
@@ -42,13 +51,12 @@ button:hover{
     align-items: center;
     justify-content: space-between;
     font-size: 18px;
-    font-weight: bold;
     text-align: center;
 }
 
 .logo{
     cursor: pointer;
-    width: 150px;
+    width: 200px;
 }
 
 .site-content {
