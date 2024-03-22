@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from webpage.models import Formularz
 
 # Create your views here.
 def index(request):
@@ -9,3 +10,19 @@ def uslugi(request):
 
 def formularz(request):
     return render(request, 'formularz.html')
+
+
+
+def sentFormularz(request):
+    if request.method == 'POST':
+        name = request.POST['imie']
+        email = request.POST.get('email')
+        phone = request.POST.get('telefon')
+        message = request.POST.get('message')
+        formularz = Formularz(
+            name=name, 
+            email=email, 
+            phone=phone, 
+            message=message)
+        formularz.save()
+        return render(request, 'sentFormularz.html')

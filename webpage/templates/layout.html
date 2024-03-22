@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Biuro Rachunkowe Select-Invest</title>
+    <link rel="icon" type="image/png" href="{% static 'webpage/favicon.png' %}">
     <link rel="stylesheet" href="{% static 'webpage/webpage.css' %}">  
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,6 +24,7 @@
         <div>
           <a class="nav-link active" aria-current="page" href="{% url 'uslugi' %}">Usługi</a>
           <a class="nav-link" href="{% url 'formularz' %}">Formularz</a>
+          <a class="nav-link" href="{% url 'formularz' %}">RODO</a>
           <a class="nav-link" href="#"><button>Kontakt</button></a>
         </div>
       </nav>

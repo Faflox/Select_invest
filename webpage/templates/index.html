@@ -18,7 +18,7 @@
 <div class="flexbox">
     <div class="flexbox-container">
         <div class="icon-container">
-            <img class="icon" src="static/webpage/svgs/alarm.svg" alt="alarm">
+            <img class="icon" src=" {% static 'webpage/svgs/alarm.svg' %}" alt="alarm">
         </div>
         <div class="flexbox-text">
             <p>
@@ -28,7 +28,17 @@
     </div>
     <div class="flexbox-container">
         <div class="icon-container">
-            <img class="icon" src="static/webpage/svgs/activity.svg" alt="activity">
+            <img class="icon" src="{% static 'webpage/svgs/bar-chart.svg' %}" alt="bar-char">
+        </div>
+        <div class="flexbox-text">
+            <p>
+                Skaluj swój biznes
+            </p>
+        </div>
+    </div>
+    <div class="flexbox-container">
+        <div class="icon-container">
+            <img class="icon" src="{% static 'webpage/svgs/activity.svg' %}" alt="activity">
         </div>
         <div class="flexbox-text">
             <p>
@@ -38,17 +48,7 @@
     </div>
     <div class="flexbox-container">
         <div class="icon-container">
-            <img class="icon" src="static/webpage/svgs/bar-chart.svg" alt="bar-char">
-        </div>
-        <div class="flexbox-text">
-            <p>
-                Doświadczona kadra
-            </p>
-        </div>
-    </div>
-    <div class="flexbox-container">
-        <div class="icon-container">
-            <img class="icon" src="static/webpage/svgs/floppy.svg" alt="floppy">
+            <img class="icon" src="{% static 'webpage/svgs/floppy.svg' %}" alt="floppy">
         </div>
         <div class="flexbox-text">
             <p>
@@ -60,11 +60,11 @@
 <div class="carousel-box">
     <h1>Zaufali nam już:</h1>
     <div class="carousel">
-        <div class="carousel-logo"><img src="static/webpage/companies-logos/1.png" alt="Logo 1"></div>
-        <div class="carousel-logo"><img src="static/webpage/companies-logos/2.png" alt="Logo 2"></div>
-        <div class="carousel-logo"><img src="static/webpage/companies-logos/3.png" alt="Logo 3"></div>
-        <div class="carousel-logo"><img src="static/webpage/companies-logos/4.png" alt="Logo 4"></div>
-        <div class="carousel-logo"><img src="static/webpage/companies-logos/5.png" alt="Logo 5"></div>
+        <div class="carousel-logo"><img src="{% static 'webpage/companies-logos/1.png' %}" alt="Logo 1"></div>
+        <div class="carousel-logo"><img src="{% static 'webpage/companies-logos/2.png' %}" alt="Logo 2"></div>
+        <div class="carousel-logo"><img src="{% static 'webpage/companies-logos/3.png' %}" alt="Logo 3"></div>
+        <div class="carousel-logo"><img src="{% static 'webpage/companies-logos/4.png' %}" alt="Logo 4"></div>
+        <div class="carousel-logo"><img src="{% static 'webpage/companies-logos/5.png' %}" alt="Logo 5"></div>
     </div>
 </div>
 
@@ -74,7 +74,7 @@
             <img src="{% static 'webpage/helpers.jpg' %}">
         </div>
         <div class="form">
-            <form method="post">
+            <form action="{% url 'sentFormularz' %}" method="POST">
                 {% csrf_token %}
                 <div class="form-title">
                     <h1>Skontaktuj się z nami</h1>
@@ -90,6 +90,9 @@
                     </div>
                 </div>
                 <button type="submit" href="#">Wyślij</button>
+                {% block sent %}
+                
+                {% endblock %}
             </form>
         </div>
     </div>

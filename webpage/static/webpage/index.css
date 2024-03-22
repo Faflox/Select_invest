@@ -10,7 +10,7 @@
 }
 
 .container{
-    padding-left: 8%;    
+    padding-left: 12%;    
 }
 
 .container h1{
@@ -85,7 +85,7 @@
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-510%); /* adjust percentage based on number of images */
+        transform: translateX(-505.5%); /* adjust percentage based on number of images */
     }
 }
   
@@ -93,7 +93,7 @@
     display: inline-block; /* Display logos in a row */
     padding: 0% 10%; /* Add spacing between logos */
     align-items: center;
-    animation: carousel-animation 20s linear infinite; /* adjust timing as needed */
+    animation: carousel-animation 15s linear infinite; /* adjust timing as needed */
     flex: 0 0 24%
 }
 
@@ -166,8 +166,9 @@
 
 .form button{
     align-items: center;
-    width: 80%;
-    margin: 4% 0%;
+    width: 28%;
+    padding: 16px;
+    margin: 4% 36%;
 }
 
 .form-title{

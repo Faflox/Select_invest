@@ -6,4 +6,5 @@ urlpatterns = [
     path("", views.index, name="index"),
     path("uslugi/", views.uslugi, name="uslugi"),
     path("formularz/", views.formularz, name="formularz"),
+    path("sentFormularz/", views.sentFormularz, name="sentFormularz"),
 ]
