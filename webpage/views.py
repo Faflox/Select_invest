@@ -8,10 +8,6 @@ def index(request):
 def uslugi(request):
     return render(request, 'uslugi.html')
 
-def formularz(request):
-    return render(request, 'formularz.html')
-
-
 
 def sentFormularz(request):
     if request.method == 'POST':
