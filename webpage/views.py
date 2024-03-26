@@ -8,6 +8,9 @@ def index(request):
 def uslugi(request):
     return render(request, 'uslugi.html')
 
+def rodo(request):
+    return render(request, 'rodo.html')
+
 
 def sentFormularz(request):
     if request.method == 'POST':

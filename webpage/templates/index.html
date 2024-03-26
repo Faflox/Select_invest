@@ -96,21 +96,38 @@
             </form>
         </div>
     </div>
-    <br>
-    <br>
-    <br>
+    <div class="separator"></div>
     <div class="uslugi-container" id="uslugi">
-        <div class="grid-item grid-item-1 uslugi-txt">
-            <h1>Co zyskujesz, dołączając do Select Invest</h1>
+        <div class="uslugi-txt">
+            <h1>W Select Invest dostajesz:</h1>
             <ul>
-                <li>Pomoc przy upraszczaniu księgowości</li>
-                <li>Rozliczenia roczne PIT</li>
-                <li>Księgowośc pełna i uproszczona</li>
                 <li>Całodobowy dostęp do dokumentacji księgowej</li>
+                <li>Powiadomienia o naleznościach do ZUS</li>
+                <li>Pomoc przy upraszczaniu księgowości</li>
+                <li>Księgowośc pełna i uproszczona</li>
+                <li>Sprawozdania do GUS i NBP</li>
+                
+                <li>Raporty i analizy danych</li>
+                <li>Rozliczenia roczne PIT</li>
+                
+                
+                <li>Wirtualne biuro</li>
+                
+                
             </ul>
         </div>
-        <div class="grid-item grid-item-1 form-img">
+        <div class="uslugi-img">
             <img src="{% static 'webpage/documents.jpg' %}">
+        </div>
+    </div>
+    <div class="aktywne-promocje" id="aktywne-promocje">
+        <div class="aktywne-promocje-img">
+        </div>
+        <div class="aktywne-promocje-txt">
+            <h1>Aktywne promocje:</h1>
+            <ul>
+                <li>Wirtualne biuro</li>
+            </ul>
         </div>
     </div>
 </div>
@@ -128,6 +145,14 @@
                 carousel.appendChild(clonedImage);
             }
         });
+    });
+
+    // Wait for the page to fully load
+    document.addEventListener("DOMContentLoaded", function() {
+        // Get the container element
+        var container = document.querySelector('.container');
+        // Show the container
+        container.style.display = 'block';
     });
 </script>
 {% endblock %}
