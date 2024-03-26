@@ -175,4 +175,7 @@
     border-bottom: #0000003e 1px solid;
 }
 
-
+.uslugi-container{
+    display: grid;
+    grid-template-columns: 50px 50px;
+}
