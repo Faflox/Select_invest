@@ -11,6 +11,9 @@ def uslugi(request):
 def rodo(request):
     return render(request, 'rodo.html')
 
+def kontakt(request):
+    return render(request, 'kontakt.html')
+
 
 def sentFormularz(request):
     if request.method == 'POST':

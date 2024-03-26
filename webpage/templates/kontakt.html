@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block head %}
+
+<link rel="stylesheet" href="{% static 'webpage/index.css' %}">  
+{% endblock %}
+
+{% block content %}
+<div class="site-content" id="contact-form">
+    <div class="contact-info">
+        <h3>Informacje kontaktowe</h3>
+        <p>
+            <i class="fas fa-map-marker-alt"></i>
+            42-612 Tarnowskie Góry, 
+            <br>ul. Wincentego Janasa 3 
+        </p>
+        <p>
+            <i class="fas fa-phone-alt"></i>
+            +48 782 226 007
+        </p>
+        <p>
+            <i class="fas fa-envelope"></i>
+            biuro@selectinvest.pl
+        </p>
+        <p>
+            <i class="fas fa-clock"></i>
+            Pn - Pt: 9:00 - 18:00
+        </p>
+
+    </div>
+    <div class="contact-map">
+
+    </div>
+</div>
+{% endblock %}
