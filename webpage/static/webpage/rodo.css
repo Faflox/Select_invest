@@ -2,10 +2,61 @@ h1{
     text-align: center;
 }
 
+h3{
+    margin-left: 4%;
+}
+
 p{
     text-align: justify;
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: 8%;
+    margin-right: 8%;
     margin-bottom: 10px;
     line-height: 1.5;
+}
+
+
+.contact-info{
+    width: 30%;
+    margin-left: 4%
+}
+
+.site-content-contact{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contact-map{
+    width: 600px;
+    height: 400px;
+}
+
+.map{
+    border-radius: 40px;
+}
+
+.footer{
+    background-color: #333;
+    color: white;
+    text-align: right;
+    font-size: 12px;
+    padding: 20px 20px;
+}
+
+
+.footer-flexbox{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-txt{
+    margin: 4px 0px;
+    text-align: right;
+}
+
+.footer a{
+    color: white;
+    padding: 0px;
 }

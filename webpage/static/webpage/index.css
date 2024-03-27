@@ -34,6 +34,15 @@
 .container h1{
     font-size: 50px;
 }
+
+.nav-link{
+    border:#00000000 1px solid;
+}
+
+.nav-link:hover{
+    border:#0000002a 1px solid;
+    border-radius: 4px;
+}
 /*4box flexbox--------------------------------------------------------------------------------------------------------------------*/
 .flexbox {
     display: flex;
@@ -63,7 +72,7 @@
     width: 24%;
     height: 36%;
     text-align: center;
-    box-shadow: 0px 0px 100px 0px #00000058;
+    box-shadow: 0px 24px 100px 0px #0000003f;
     backdrop-filter: blur(24px);
     transition: transform .3s;
     animation-name: slideInFromBottom;
@@ -137,10 +146,10 @@
 
 /*formularz-----------------------------------------------------------------------------------------------------------------------*/
 .site-content{
-    margin: 0% 8%;
+    margin: 4% 8%;
     padding: 1%;
-    background: linear-gradient(to right, rgba(240, 248, 255, 0.7), rgba(110, 224, 214, 0.496)); /* Add a gradient from rgba(240, 248, 255, 0.7) to rgba(255, 255, 255, 0.5) */
-    backdrop-filter: blur(10px); /* Apply a blur effect */
+    background: linear-gradient(to right, rgba(240, 248, 255, 0.7), rgba(174, 232, 227, 0.19)); /* Add a gradient from rgba(240, 248, 255, 0.7) to rgba(255, 255, 255, 0.5) */
+    backdrop-filter: blur(24px); /* Apply a blur effect */
     border-radius: 50px;
     box-shadow: 0px 0px 100px 0px #00000058;
 }
@@ -250,4 +259,68 @@
     object-fit: cover;
     border-radius: 40px;
     box-shadow: 0px 0px 100px 0px #fdfeff3d;
+}
+
+@media only screen and (max-width: 1000px){
+    .container h1{
+        font-size: 32px;
+        padding-right: 20%;
+    }
+
+    .flexbox{
+        margin: 4%;
+        padding: 0%;
+        flex-wrap: wrap;
+        margin-top: -40px;
+    }
+
+    .flexbox-container{
+        margin: 2% 0%;
+        padding: 0%;
+        width: 48%;
+    }
+
+    .carousel-box{
+        margin: 0%;
+    }
+
+    .carousel-box h1{
+        font-size: 16px;
+        padding: 0%;
+        margin: 20px 20px;
+    }
+
+    .site-content {
+        margin: 20px 20px;
+    }
+
+    .contact-form{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-img{
+        margin: 4% 8%; 
+        width: 92%;
+    }
+
+    .form{
+        width: 100%;
+        margin-top: 0%;
+        padding-top: 0%;
+    }
+
+    .uslugi-container{
+        flex-direction: column;
+    }
+
+    .uslugi-txt{
+        width: 100%;
+    }
+
+    .uslugi-container h1{
+        border-top: #00000049;
+        border-top: 1px;
+        border-top-style: solid;
+    }
 }
