@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.contrib import messages
 from webpage.models import Formularz
 
 # Create your views here.
@@ -14,17 +15,20 @@ def rodo(request):
 def kontakt(request):
     return render(request, 'kontakt.html')
 
-
 def sentFormularz(request):
     if request.method == 'POST':
         name = request.POST['imie']
         email = request.POST.get('email')
         phone = request.POST.get('telefon')
-        message = request.POST.get('message')
+        dodatkowe = request.POST.get('dodatkowe')
+        
         formularz = Formularz(
             name=name, 
             email=email, 
             phone=phone, 
-            message=message)
+            dodatkowe=dodatkowe)
         formularz.save()
-        return render(request, 'sentFormularz.html')
+        
+        messages.success(request, 'Formularz wysłany. Niedługo skontaktujemy się z Toba.')
+        return render(request, 'index.html')
+    return render(request, 'index.html')

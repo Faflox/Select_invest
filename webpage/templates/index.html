@@ -7,6 +7,14 @@
 
 
 {% block content %}
+<div class="form-messages">
+    {% if messages %}
+        
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+    {% endif %}
+</div>
 <div class="hero">
     <div class="container">
         <h1>
@@ -74,7 +82,7 @@
             <img src="{% static 'webpage/helpers.jpg' %}">
         </div>
         <div class="form">
-            <form action="{% url 'sentFormularz' %}" method="POST">
+            <form method="POST" action="{% url 'sentFormularz' %}">
                 {% csrf_token %}
                 <div class="form-title">
                     <h1>Skontaktuj się z nami</h1>
@@ -89,11 +97,9 @@
                         <input class="text-message" type="text from-control" id="dodatkowe" name="dodatkowe" placeholder="Dodatkowe informacje">
                     </div>
                 </div>
-                <button type="submit" href="#">Wyślij</button>
-                {% block sent %}
-                
-                {% endblock %}
+                <button type="submit" class="form-btn">Wyślij</button>
             </form>
+
         </div>
     </div>
     <div class="separator"></div>
@@ -109,10 +115,7 @@
                 
                 <li>Raporty i analizy danych</li>
                 <li>Rozliczenia roczne PIT</li>
-                
-                
                 <li>Wirtualne biuro</li>
-                
                 
             </ul>
         </div>
